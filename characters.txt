@@ -1,0 +1,50 @@
+Control Characters - These are typically invisible or have special meanings in terminals/editors. Shown here as escaped backslash notation (\xNN) for clarity. If you want to literally insert them (which many editors may not display properly), you may need to programmatically include them by their byte values.
+
+\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0A\x0B\x0C\x0D\x0E\x0F
+\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1A\x1B\x1C\x1D\x1E\x1F
+\x7F
+
+Basic Printable ASCII (0x20–0x7E) - This is the standard range of printable ASCII characters.
+
+ !"#$%&'()*+,-./0123456789:;<=>?@
+ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`
+abcdefghijklmnopqrstuvwxyz{|}~
+
+Extended ASCII Range (0x80–0xFF) - Depending on your system’s code page or font, these may appear differently or might not display at all. Below are shown as backslash-escaped bytes for clarity, but you might want to try using them literally if your environment supports it.
+
+Backslash-escaped versions
+\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89\x8A\x8B\x8C\x8D\x8E\x8F
+\x90\x91\x92\x93\x94\x95\x96\x97\x98\x99\x9A\x9B\x9C\x9D\x9E\x9F
+\xA0\xA1\xA2\xA3\xA4\xA5\xA6\xA7\xA8\xA9\xAA\xAB\xAC\xAD\xAE\xAF
+\xB0\xB1\xB2\xB3\xB4\xB5\xB6\xB7\xB8\xB9\xBA\xBB\xBC\xBD\xBE\xBF
+\xC0\xC1\xC2\xC3\xC4\xC5\xC6\xC7\xC8\xC9\xCA\xCB\xCC\xCD\xCE\xCF
+\xD0\xD1\xD2\xD3\xD4\xD5\xD6\xD7\xD8\xD9\xDA\xDB\xDC\xDD\xDE\xDF
+\xE0\xE1\xE2\xE3\xE4\xE5\xE6\xE7\xE8\xE9\xEA\xEB\xEC\xED\xEE\xEF
+\xF0\xF1\xF2\xF3\xF4\xF5\xF6\xF7\xF8\xF9\xFA\xFB\xFC\xFD\xFE\xFF
+
+Literal (may or may not render properly)
+
+
+ ¡¢£¤¥¦§¨©ª«¬­®¯
+°±²³´µ¶·¸¹º»¼½¾¿
+ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏ
+ÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞß
+àáâãäåæçèéêëìíîï
+ðñòóôõö÷øùúûüýþÿ
+
+Sample Accented/Diacritical Letters - These test how the system handles simple Unicode beyond the basic ASCII range (often used in Western European languages)
+
+À Á Â Ä Ç É ñ ö Ü ß Ḃ ḃ Ẁ ẁ
+
+Non-Latin Scripts - To test for multi-byte/Unicode handling outside of typical Latin scripts:
+    Chinese: 你好 (nǐ hǎo)
+    Cyrillic: мир (mir)
+
+你好 мир
+
+Emojis - Emojis are multi-byte Unicode characters and often reveal if an application filters out or breaks on extended (and sometimes surrogate pair) code points
+
+😀 🤔 🚀 🏳️‍🌈 🐱‍👓
+
+
+
